@@ -6,31 +6,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--es el titulo de la pagina donde estamos parados-->
     <title>CACFLIX | Catalogo de peliculas</title>
-    <!--el icono que represeta al sitio web y se ve en la pestaña-->
+    <!-- Efectos -->
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/4b48f964ee.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Estilos -->
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
     <header id="home" class="header">
-        <div class="header-bloque">
+        <div class="header-bloque fw-bold py-2 px-5  d-flex justify-content-between align-items-center">
             <a href="./index.html">
-                <img class="header-logo" src="./assets/img/logo.png" alt="Logo de CACFLIX" width="100" loading="lazy">
+                <img class="header-logo" src="./assets/img/logo.png" alt="Logo de CACFLIX" loading="lazy">
             </a>
             <nav class="navegacion">
                 <div>
-                    <a class="navegacion-enlace" href="#tendencias">TENDENCIAS</a>
-                    <a class="navegacion-enlace" href="./pages/registrarse.html">REGISTRARSE</a>
-                    <a class="navegacion-enlace" href="./pages/iniciciosesion.html">INICIAR SESIÓN</a>
+                    <a class="navegacion-enlace p-3" href="#tendencias">TENDENCIAS</a>
+                    <a class="navegacion-enlace p-3" href="./pages/registrarse.html">REGISTRARSE</a>
+                    <a class="navegacion-enlace p-3" href="./pages/iniciciosesion.html">INICIAR SESIÓN</a>
                 </div>
             </nav>
-            <nav class="navbar-responsive navbar">
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+            <nav class="navbar-responsive navbar ">
+                <button class="navbar-toggler py-3 px-4 " type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -44,13 +47,15 @@
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                             <li class="nav-item">
-                                <a class="navegacion-enlace nav-link active" aria-current="page" href="">TENDENCIAS</a>
+                                <a class="navegacion-enlace p-3 nav-link active" aria-current="page"
+                                    href="">TENDENCIAS</a>
                             </li>
                             <li class="nav-item">
-                                <a class="navegacion-enlace nav-link" href="./pages/registrarse.html">REGISTRARSE</a>
+                                <a class="navegacion-enlace p-3 nav-link"
+                                    href="./pages/registrarse.html">REGISTRARSE</a>
                             </li>
                             <li class="nav-item">
-                                <a class="navegacion-enlace nav-link" href="./pages/iniciciosesion.html">INICIAR
+                                <a class="navegacion-enlace p-3 nav-link" href="./pages/iniciciosesion.html">INICIAR
                                     SESIÓN</a>
                             </li>
                         </ul>
@@ -61,31 +66,29 @@
     </header>
 
 
-    <section class="hero">
+    <section class="hero w-100 mx-auto overflow-hidden">
         <div class="hero-contenido">
-            <div class="hero-texto">
-                <h1 class="tituloPrincipal">Películas y series ilimitadas
+            <div class="hero-texto text-center">
+                <h1 class="titulo-principal fw-bold">Películas y series ilimitadas
                     <br>
                     en un solo lugar
                 </h1>
-                <h2 class="subtituloPrincipal">Disfruta donde quieras.
+                <h2 class="subtitulo-principal fw-bold ">Disfruta donde quieras.
                     <br>
                     Cancela en cualquier momento.
                 </h2>
-                <a class="btn-hero btn btn-warning" href="./pages/registrarse.html" role="button">Registrate</a>
+                <a class="btn-hero btn btn-warning fs-2 py-3 px-4" href="./pages/registrarse.html"
+                    role="button">Registrate</a>
             </div>
         </div>
     </section>
 
     <section class="section-buscador">
         <h2>¿Qué estas buscando para ver?</h2>
-        <!-- <form action="">
-            <input type="text">
-            <input type="submit" value="Buscar">
-        </form> -->
-        <div class="contenedor">
+
+        <div class="mx-auto" data-aos="fade-up" data-aos-offset="300" data-aos-delay="50" data-aos-duration="1000">
             <form class="d-flex mt-3 formulario-buscador" role="search">
-                <input class="formulario-input form-control me-2" type="search" placeholder="Buscar..."
+                <input class="formulario-input form-control me-2 form-control-lg" type="search" placeholder="Buscar..."
                     aria-label="Search">
                 <button class="btn btn-warning" type="submit">Search</button>
             </form>
@@ -94,38 +97,48 @@
 
     <hr class="linea">
 
-    <section id="tendencias" class="container tendencias-peliculas">
-        <h2>Tendencias de hoy</h2>
-        <div class="container-peliculas">
-            <a href="./pages/detalle.html">
-                <img src="./assets/img/movie1.jpg" alt="movie1">
+    <section id="tendencias" class="container tendencias-peliculas" data-aos="fade-up"
+        data-aos-anchor-placement="top-center" loading="lazy">
+        <h2 class="text-center fw-bold text-uppercase">Tendencias de hoy</h2>
+        <div class="container-peliculas row row-cols-lg-5 row-cols-md-4 row-cols-sm-2 row-cols-1">
+            <a class="p-lg-3 p-md-2 p-5" href="./pages/detalle.html">
+                <img class="h-100 img-fluid" src="./assets/img/movie1.jpg" alt="movie1">
             </a>
-            <a href="./pages/detalle.html">
-                <img src="./assets/img/movie2.jpg" alt="movie2">
+
+            <a class="p-lg-3 p-md-2 p-5" href="./pages/detalle.html">
+                <img class="h-100 img-fluid" src="./assets/img/movie2.jpg" alt="movie2">
             </a>
-            <a href="./pages/detalle.html">
-                <img src="./assets/img/movie3.jpg" alt="movie3">
+
+            <a class="p-lg-3 p-md-2 p-5" href="./pages/detalle.html">
+                <img class="h-100 img-fluid" src="./assets/img/movie3.jpg" alt="movie3">
             </a>
-            <a href="./pages/detalle.html">
-                <img src="./assets/img/movie4.jpg" alt="movie4">
+
+            <a class="p-lg-3 p-md-2 p-5" href="./pages/detalle.html">
+                <img class="h-100 img-fluid" src="./assets/img/movie4.jpg" alt="movie4">
             </a>
-            <a href="./pages/detalle.html">
-                <img src="./assets/img/movie5.jpg" alt="movie5">
+
+            <a class="p-lg-3 p-md-2 p-5" href="./pages/detalle.html">
+                <img class="h-100 img-fluid" src="./assets/img/movie5.jpg" alt="movie5">
             </a>
-            <a href="./pages/detalle.html">
-                <img src="./assets/img/movie6.jpg" alt="movie6">
+
+            <a class="p-lg-3 p-md-2 p-5" href="./pages/detalle.html">
+                <img class="h-100 img-fluid" src="./assets/img/movie6.jpg" alt="movie6">
             </a>
-            <a href="./pages/detalle.html">
-                <img src="./assets/img/movie7.jpg" alt="movie7">
+
+            <a class="p-lg-3 p-md-2 p-5" href="./pages/detalle.html">
+                <img class="h-100 img-fluid" src="./assets/img/movie7.jpg" alt="movie7">
             </a>
-            <a href="./pages/detalle.html">
-                <img src="./assets/img/movie8.jpg" alt="movie8">
+
+            <a class="p-lg-3 p-md-2 p-5" href="./pages/detalle.html">
+                <img class="h-100 img-fluid" src="./assets/img/movie8.jpg" alt="movie8">
             </a>
-            <a href="./pages/detalle.html">
-                <img src="./assets/img/movie9.jpg" alt="movie9">
+
+            <a class="p-lg-3 p-md-2 p-5" href="./pages/detalle.html">
+                <img class="h-100 img-fluid" src="./assets/img/movie9.jpg" alt="movie9">
             </a>
-            <a href="./pages/detalle.html">
-                <img src="./assets/img/movie10.jpg" alt="movie10">
+
+            <a class="p-lg-3 p-md-2 p-5" href="./pages/detalle.html">
+                <img class="h-100 img-fluid" src="./assets/img/movie10.jpg" alt="movie10">
             </a>
         </div>
         <div class="botones-tendencias">
@@ -136,9 +149,10 @@
 
     <hr class="linea">
 
-    <section class=" peliculas-aclamadas container">
-        <h2>Las más aclamadas</h2>
-        <div class="section-aclamadas">
+    <section class=" peliculas-aclamadas container" data-aos="fade-up" data-aos-anchor-placement="top-center"
+        loading="lazy">
+        <h2 class="text-center fw-bold text-uppercase">Las más aclamadas</h2>
+        <div class="section-aclamadas d-flex w-100">
             <div class="section-pelicula">
                 <a href="./pages/detalle.html">
                     <img src="./assets/img/movie11.jpg" alt="Interstellar">
@@ -189,22 +203,24 @@
     </section>
 
     <footer class="footer">
-        <div class="contenedor">
+        <div class="container">
             <div class="footer-contenido">
                 <a href="#home">
-                    <img class="footer-logo" src="./assets/img/logo.png" alt="CACFLIX">
+                    <img class="footer-logo" src="../assets/img/logo.png" alt="CACFLIX">
                 </a>
-
                 <p class="m-0">CACFLIX - Todos los derechos Reservados.</p>
 
             </div>
         </div>
     </footer>
 
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

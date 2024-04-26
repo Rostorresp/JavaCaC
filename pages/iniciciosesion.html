@@ -19,20 +19,19 @@
 <body>
     <div class="container-iniciosesion">
         <header id="home" class="header">
-            <div class="header-bloque">
+            <div class="header-bloque fw-bold py-2 px-5  d-flex justify-content-between align-items-center">
                 <a href="../index.html">
-                    <img class="header-logo" src="../assets/img/logo.png" alt="Logo de CACFLIX" width="100"
-                        loading="lazy">
+                    <img class="header-logo" src="../assets/img/logo.png" alt="Logo de CACFLIX" loading="lazy">
                 </a>
                 <nav class="navegacion">
                     <div>
-                        <a class="navegacion-enlace" href="../index.html">TENDENCIAS</a>
-                        <a class="navegacion-enlace" href="../pages/registrarse.html">REGISTRARSE</a>
-                        <a class="navegacion-enlace">INICIAR SESIÓN</a>
+                        <a class="navegacion-enlace p-3" href="../index.html">TENDENCIAS</a>
+                        <a class="navegacion-enlace p-3" href="../pages/registrarse.html">REGISTRARSE</a>
+                        <a class="navegacion-enlace p-3" href="#loginForm">INICIAR SESIÓN</a>
                     </div>
                 </nav>
-                <nav class="navbar-responsive navbar">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                <nav class="navbar-responsive navbar ">
+                    <button class="navbar-toggler py-3 px-4 " type="button" data-bs-toggle="offcanvas"
                         data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
                         aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -46,15 +45,15 @@
                         <div class="offcanvas-body">
                             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                                 <li class="nav-item">
-                                    <a class="navegacion-enlace nav-link active" aria-current="page"
+                                    <a class="navegacion-enlace p-3 nav-link active" aria-current="page"
                                         href="">TENDENCIAS</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="navegacion-enlace nav-link"
-                                        href="./pages/registrarse.html">REGISTRARSE</a>
+                                    <a class="navegacion-enlace p-3 nav-link"
+                                        href="../pages/registrarse.html">REGISTRARSE</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="navegacion-enlace nav-link" href="./pages/iniciciosesion.html">INICIAR
+                                    <a class="navegacion-enlace p-3 nav-link" href="#loginForm">INICIAR
                                         SESIÓN</a>
                                 </li>
                             </ul>
@@ -66,7 +65,7 @@
         <main>
             <div class="form-container">
                 <h2>Iniciar Sesión</h2>
-                <form  id="loginForm" action="#">
+                <form id="loginForm" action="#">
                     <input type="text" id="email" name="email" placeholder="Correo electrónico" required>
                     <!-- <span class="error-message m-0" id="emailError">El email es requerido.</span> -->
                     <input type="password" id="password" name="password" placeholder="Contraseña" required>
@@ -77,7 +76,7 @@
             </div>
         </main>
         <footer class="footer">
-            <div class="contenedor">
+            <div class="container">
                 <div class="footer-contenido">
                     <a href="#home">
                         <img class="footer-logo" src="../assets/img/logo.png" alt="CACFLIX">
