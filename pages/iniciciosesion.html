@@ -66,10 +66,15 @@
             <div class="form-container">
                 <h2>Iniciar Sesión</h2>
                 <form id="loginForm" action="#">
-                    <input type="text" id="email" name="email" placeholder="Correo electrónico" required>
-                    <!-- <span class="error-message m-0" id="emailError">El email es requerido.</span> -->
-                    <input type="password" id="password" name="password" placeholder="Contraseña" required>
-                    <!-- <span class="error-message" id="passwordError">La contraseña es requerida.</span> -->
+                    <div>
+                        <input type="email" id="loginEmail" name="email" placeholder="Correo electrónico">
+                        <span id="loginEmailError" class="error"></span>
+                    </div>
+                    <div>
+                        <input type="password" id="loginPassword" name="password" placeholder="Contraseña">
+                        <span id="loginPasswordError" class="error"></span>
+                    </div>
+
                     <input type="submit" value="Iniciar Sesión">
                     <a class="form-iniciosesion-registrarse" href="../pages/registrarse.html">Registrarse</a>
                 </form>
@@ -91,6 +96,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+
+    <script src="/js/inicioSesion.js"></script>
 </body>
 
 </html>

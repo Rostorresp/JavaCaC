@@ -68,18 +68,31 @@
             <div class="form-container">
                 <section id="registro" class="section-registro">
                     <h1>Registro</h1>
-                    <form action="valida.php" method="post">
+                    <form id="registrationForm" action="valida.php" method="post">
                         <div class="contenedor-campos">
-                            <input class="campo" type="text" name="nombre" id="nombre" placeholder="Nombre" required>
-                            <input class="campo" type="text" name="apellido" id="apellido" placeholder="Apellido"
-                                required>
-                            <input class="campo" type="email" name="email" id="email" placeholder="Email" required>
-                            <input class="campo" type="password" name="password" id="password" placeholder="Contraseña"
-                                required>
-                            <input class="campo" type="date" name="nacimiento" id="nacimiento" required>
+                            <div class="campo">
+                                <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                                <span id="nombreError" class="error"></span>
+                            </div>
+                            <div class="campo">
+                                <input type="text" name="apellido" id="apellido" placeholder="Apellido">
+                                <span id="apellidoError" class="error"></span>
+                            </div>
+                            <div class="campo">
+                                <input type="email" name="email" id="email" placeholder="Email">
+                                <span id="emailError" class="error"></span>
+                            </div>
+                            <div class="campo">
+                                <input type="password" name="password" id="password" placeholder="Contraseña">
+                                <span id="passwordError" class="error"></span>
+                            </div>
+                            <div class="campo">
+                                <input type="date" name="nacimiento" id="nacimiento">
+                                <span id="fechaNacimientoError" class="error"></span>
+                            </div>
                         </div>
-                        <div>
 
+                        <div>
                             <select name="pais" id="pais" class="form-select form-select-lg mb-3"
                                 aria-label="Large select example">
                                 <option value> País</option>
@@ -94,10 +107,12 @@
                                 <option value="CL">Paraguay</option>
                                 <option value="CL">Colombia</option>
                             </select>
+                            <span id="paisError" class="error"></span>
                         </div>
                         <div class="mt-2 d-flex">
                             <input type="checkbox" name="termino" id="terminos">
                             <label class="fs-5 ms-2" for="terminos">Aceptar terminos y condiciones</label>
+                            <div id="terminosError" class="error"></div>
                         </div>
                         <input type="submit" value="Registrarse">
                         <a class="fs-5" href="../index.html">Necesitas ayuda?</a>
@@ -124,6 +139,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+
+    <script src="/js/index.js"></script>
 </body>
 
 </html>

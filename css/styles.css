@@ -300,3 +300,30 @@ input[type="submit"] {
 .campo:nth-child(5) {
   grid-column: 1 / 3;
 }
+
+.error {
+  color: red;
+  font-size: 0.875em;
+}
+
+/* CARDS */
+
+.movie-card {
+  margin-bottom: 2rem;
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+  border: none;
+}
+
+.movie-card .card-title {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.card-body {
+  padding-left: 1.2rem;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.6;
+}

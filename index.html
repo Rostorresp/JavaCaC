@@ -88,62 +88,24 @@
 
         <div class="mx-auto" data-aos="fade-up" data-aos-offset="300" data-aos-delay="50" data-aos-duration="1000">
             <form class="d-flex mt-3 formulario-buscador" role="search">
-                <input class="formulario-input form-control me-2 form-control-lg" type="search" placeholder="Buscar..."
+                <input class="formulario-input form-control me-2 form-control-lg" type="search" placeholder="Coraline"
                     aria-label="Search">
-                <button class="btn btn-warning" type="submit">Search</button>
+                <button class="btn btn-warning" type="submit">Buscar</button>
             </form>
         </div>
     </section>
 
     <hr class="linea">
 
-    <section id="tendencias" class="container tendencias-peliculas" data-aos="fade-up"
-        data-aos-anchor-placement="top-center" loading="lazy">
+    <section id="movies" class="container tendencias-peliculas" data-aos="fade-up"
+        data-aos-anchor-placement="top-center" loading="lazy" data-aos-duration="1000">
         <h2 class="text-center fw-bold text-uppercase">Tendencias de hoy</h2>
-        <div class="container-peliculas row row-cols-lg-5 row-cols-md-4 row-cols-sm-2 row-cols-1">
-            <a class="p-lg-3 p-md-2 p-5" href="./pages/detalle.html">
-                <img class="h-100 img-fluid" src="./assets/img/movie1.jpg" alt="movie1">
-            </a>
-
-            <a class="p-lg-3 p-md-2 p-5" href="./pages/detalle.html">
-                <img class="h-100 img-fluid" src="./assets/img/movie2.jpg" alt="movie2">
-            </a>
-
-            <a class="p-lg-3 p-md-2 p-5" href="./pages/detalle.html">
-                <img class="h-100 img-fluid" src="./assets/img/movie3.jpg" alt="movie3">
-            </a>
-
-            <a class="p-lg-3 p-md-2 p-5" href="./pages/detalle.html">
-                <img class="h-100 img-fluid" src="./assets/img/movie4.jpg" alt="movie4">
-            </a>
-
-            <a class="p-lg-3 p-md-2 p-5" href="./pages/detalle.html">
-                <img class="h-100 img-fluid" src="./assets/img/movie5.jpg" alt="movie5">
-            </a>
-
-            <a class="p-lg-3 p-md-2 p-5" href="./pages/detalle.html">
-                <img class="h-100 img-fluid" src="./assets/img/movie6.jpg" alt="movie6">
-            </a>
-
-            <a class="p-lg-3 p-md-2 p-5" href="./pages/detalle.html">
-                <img class="h-100 img-fluid" src="./assets/img/movie7.jpg" alt="movie7">
-            </a>
-
-            <a class="p-lg-3 p-md-2 p-5" href="./pages/detalle.html">
-                <img class="h-100 img-fluid" src="./assets/img/movie8.jpg" alt="movie8">
-            </a>
-
-            <a class="p-lg-3 p-md-2 p-5" href="./pages/detalle.html">
-                <img class="h-100 img-fluid" src="./assets/img/movie9.jpg" alt="movie9">
-            </a>
-
-            <a class="p-lg-3 p-md-2 p-5" href="./pages/detalle.html">
-                <img class="h-100 img-fluid" src="./assets/img/movie10.jpg" alt="movie10">
-            </a>
+        <div class="container-peliculas row row-cols-lg-5 row-cols-md-4 row-cols-sm-2 row-cols-1" id="movieList">
+           
         </div>
         <div class="botones-tendencias">
-            <button type="button" class="btn-anterior btn btn-warning">Anterior</button>
-            <button type="button" class="btn-proximo btn btn-warning">Proximo</button>
+            <button id="prevPage" class="btn-anterior btn btn-warning">Anterior</button>
+            <button id="nextPage" class="btn-proximo btn btn-warning">Proximo</button>
         </div>
     </section>
 
@@ -214,6 +176,8 @@
         </div>
     </footer>
 
+    <script src="/js/index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
